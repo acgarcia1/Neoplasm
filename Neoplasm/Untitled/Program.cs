@@ -12,6 +12,7 @@ namespace Neoplasm.Untitled
             EventPrint.PrintOpening();
             Rooms.Room1();
             Console.ReadLine();
+            Console.WriteLine("Testing my commits to Github.");
         }
     }
 }
