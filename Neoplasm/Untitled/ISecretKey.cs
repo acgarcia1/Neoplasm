@@ -7,6 +7,6 @@ namespace Neoplasm.Untitled
 {
     public interface ISecretKey
     {
-        void found();
+        bool foundKey();
     }
 }

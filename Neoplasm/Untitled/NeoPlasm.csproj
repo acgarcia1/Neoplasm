@@ -39,23 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Brawny.cs" />
-    <Compile Include="userCharacter.cs" />
+    <Compile Include="userMonster.cs" />
+    <Compile Include="ISecretBoard.cs" />
+    <Compile Include="ISecretAxe.cs" />
+    <Compile Include="ISecretKey.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Slight.cs" />
-    <Compile Include="Nimble.cs" />
-    <Compile Include="BrawnyArcheologist.cs" />
-    <Compile Include="SlightTradeWorker.cs" />
-    <Compile Include="NimbleScientist.cs" />
     <Compile Include="Rooms.cs" />
     <Compile Include="EventPrint.cs" />
-    <Compile Include="BrawnyScientist.cs" />
-    <Compile Include="SlightScientist.cs" />
-    <Compile Include="NimbleArcheologist.cs" />
-    <Compile Include="SlightArcheologist.cs" />
-    <Compile Include="NimbleTradeWorker.cs" />
-    <Compile Include="BrawnyTradeWorker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

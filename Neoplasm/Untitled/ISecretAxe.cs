@@ -5,7 +5,8 @@ using System.Text;
 
 namespace Neoplasm.Untitled
 {
-    class Class1
+    public interface ISecretAxe
     {
+        bool foundAxe();
     }
 }

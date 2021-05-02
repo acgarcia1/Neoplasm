@@ -8,8 +8,10 @@ namespace Neoplasm.Untitled
     class Program
     {
         static void Main(string[] args)
-        {                   
-            Console.WriteLine("Welcome to NeoPlasm, a text adventure game inspired by Lovercraftian horror. What is your name?");
+        {
+            string play = "Y";
+
+            Console.WriteLine("Welcome to NeoPlasm, a text adventure game inspired by Lovercraftian horror. What is your name?");           
             string userName = Console.ReadLine();
             Console.WriteLine("Nice to meet you {0}. Now tell me, what is your age?", userName);
             int userAge;
@@ -19,18 +21,25 @@ namespace Neoplasm.Untitled
             }
             Console.WriteLine("Very good. If you had to describe yourself to a stranger, would you say Brawny, Nimble, or Slight?");
             string userType = Console.ReadLine();
-            userType = userType.ToUpper();          
-            Console.WriteLine("Your choices will affect the outcome of the game, the options you have, and your chances of success. Good luck to you, brave soul for you now enter:");
-            var userCharacter = new User(userAge, userName, userType);
-            Console.WriteLine(userCharacter.Speed);
-            Console.WriteLine(userCharacter.Strength);
-            Console.WriteLine(userCharacter.Size);
-            
+            userType = userType.ToUpper();
+            Console.WriteLine("One last question. Don't overthink it. What scares you most: Spiders, Needles, Cows, or the Ocean?");
+            string userMon = Console.ReadLine();
+            userMon = userMon.ToUpper();
+            var userMonster = new userMonster(userMon);
+            Console.WriteLine("Your choices will affect the outcome of the game, the options you have, and your chances of success. Good luck to you, brave soul, for you now enter:");
+            var userCharacter = new User(userAge, userName, userType);        
+          
             Console.ReadLine();
-            Console.Clear();
-            EventPrint.printTitle();
-            Rooms.Room1(userCharacter.Speed, userCharacter.Size, userCharacter.Strength);
-            Console.ReadLine();
+            while (play != "N")
+            {
+                Console.Clear();
+                EventPrint.printTitle();
+                Rooms.Room1(userCharacter.Speed, userCharacter.Size, userCharacter.Strength);
+                Console.WriteLine("Would you like to try again? (Y/N)");
+                play = Console.ReadLine();
+                play = play.ToUpper();
+            }
+
         }
     }
 }

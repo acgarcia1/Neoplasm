@@ -7,5 +7,6 @@ namespace Neoplasm.Untitled
 {
     public interface ISecretBoard
     {
+        bool foundBoard();
     }
 }

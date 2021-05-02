@@ -12,9 +12,9 @@ namespace Neoplasm.Untitled
         public int Strength { get; set; }
         public int Speed { get; set; }
         public int Size { get; set; }
-        bool key = false;
-        bool axe = false;
-        bool skateBoard = false;
+        public bool key = false;
+        public bool axe = false;
+        public bool skateBoard = false;
         
         public bool foundBoard()
         {
