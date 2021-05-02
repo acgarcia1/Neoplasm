@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Neoplasm.Untitled
 {
-	public class Slight
+	public class Slight : User
 	{
 	
         public int Age { get; set; }
@@ -15,6 +15,7 @@ namespace Neoplasm.Untitled
 
         public Slight()
 		{
+
 			Strength = 4;
 			Speed = 6;
 			Size = 3;

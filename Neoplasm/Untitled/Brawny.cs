@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Neoplasm.Untitled
 {
-	public class Brawny
+	public class Brawny : User
 	{	
         public int Age { get; set; }
         public string Name { get; set; }

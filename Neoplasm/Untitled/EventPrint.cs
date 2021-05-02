@@ -14,21 +14,32 @@ namespace Neoplasm.Untitled
 		public static void printDeath()
 		{
 			Console.WriteLine("You have failed to discovery the mystery and escape. Dark tendrils from the black earth reach around you," +
-							  "dragging you down to join the eternal Neoplasm growing from out failures.");
+							  "dragging you down to join the eternal Neoplasm growing from our failures.");
 		}
 
 		public static void printTitle()
 		{
-			Console.WriteLine("------------\n | NEOPLASM |\n------------");
+			string titleTop = "------------";
+			string titleMid = "| NEOPLASM |";
+			string titleBottom = "------------";
+			//Console.SetCursorPosition((Console.WindowWidth - titlePrint.Length) / 2, Console.CursorTop);
+			Console.WriteLine(String.Format("{0," + (Console.WindowWidth / 2) + "}", titleTop));
+			Console.WriteLine(String.Format("{0," + (Console.WindowWidth / 2) + "}", titleMid));
+			Console.WriteLine(String.Format("{0," + (Console.WindowWidth / 2) + "}", titleBottom));
+			//Console.WriteLine("------------\n| NEOPLASM |\n------------");
 		}
 
 		public static void PrintOpening()
 		{
+			Object userCharacter;
 			Console.WriteLine("Welcome to NeoPlasm, a text adventure game inspired by Lovercraftian horror. What is your name?");
 			userName = Console.ReadLine();
-			Console.WriteLine("Nice to meet you {0}. Now tell me, what is your age?", userName);
-			userAgeString = Console.ReadLine();
-			userAge = Convert.ToInt32(userAgeString);
+			Console.WriteLine("Nice to meet you {0}. Now tell me, what is your age?", userName);		
+			int userAge;
+			while(!int.TryParse(Console.ReadLine(), out userAge))
+            {
+				Console.WriteLine("Please enter a number.");
+            }
 			Console.WriteLine("Very good. If you had to describe yourself to a stranger, would you say Brawny, Nimble, or Slight?");
 			userType = Console.ReadLine();
 			userType = userType.ToUpper();
@@ -41,50 +52,51 @@ namespace Neoplasm.Untitled
             {
 				if (userSpecial == "SCIENTIST")
 				{
-                    BrawnyScientist userCharacter = new BrawnyScientist(userAge, userName);
+                    userCharacter = new BrawnyScientist(userAge, userName);
                 }
 				else if (userSpecial == "ARCHEOLOGIST") 
                 {
-					BrawnyArcheologist userCharacter = new BrawnyArcheologist(userName, userAge);
+					userCharacter = new BrawnyArcheologist(userName, userAge);
                 }
 				else
                 {
-					BrawnyTrade userCharacter = new BrawnyTrade(userAge, userName);
+					userCharacter = new BrawnyTrade(userAge, userName);
                 }
             }
 			else if (userType == "NIMBLE")
             {
 				if (userSpecial == "SCIENTISTS")
                 {
-					NimbleScientist userCharacter = new NimbleScientist(userAge, userName);
+					userCharacter = new NimbleScientist(userAge, userName);				
                 }
 				else if (userSpecial == "ARCHEOLOGIST")
                 {
-					NimbleArcheologist userCharacter = new NimbleArcheologist(userAge, userName);
+					userCharacter = new NimbleArcheologist(userAge, userName);
                 }
 				else
                 {
-					NimbleTradeWorker userCharacter = new NimbleTradeWorker(userAge, userName);
+					userCharacter = new NimbleTradeWorker(userAge, userName);
                 }
             }
 			else
             {
 				if (userSpecial == "SCIENTISTS")
                 {
-					SlightScientist userCharacter = new SlightScientist(userName, userAge);
+					userCharacter = new SlightScientist(userName, userAge);
 
                 }
 				else if (userSpecial == "ARCHEOLOGIST")
                 {
-					SlightArcheologist userCharacter = new SlightArcheologist(userAge, userName);
+					userCharacter = new SlightArcheologist(userAge, userName);
                 }
 				else
                 {
-					SlightTradeWorker userCharacter = new SlightTradeWorker(userAge, userName);
+					userCharacter = new SlightTradeWorker(userAge, userName);
                 }
             }
-			printTitle();
-
+			Console.ReadLine();
+			Console.Clear();
+			printTitle();			
 		}
 	}
 }

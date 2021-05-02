@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Neoplasm.Untitled
 {
-	public class Nimble  
+	public class Nimble : User
 	{
 
 		public int Age { get; set; }
@@ -12,6 +12,13 @@ namespace Neoplasm.Untitled
 		public int Strength { get; set; }
 		public int Speed { get; set; }
 		public int Size { get; set; }
+
+		public Nimble()
+        {
+			Strength = 6;
+			Speed = 9;
+			Size = 6;
+        }
 
 		public Nimble(int userAge)
 		{
@@ -30,7 +37,7 @@ namespace Neoplasm.Untitled
 			else
             {
 				Strength = 5;
-				Speed = 7;
+				Speed = 8;
 				Size = 6;
             }			
 		}
