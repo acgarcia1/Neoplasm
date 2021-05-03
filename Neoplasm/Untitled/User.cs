@@ -5,10 +5,20 @@ using System.Text;
 
 namespace Neoplasm.Untitled
 {
-    public class User : ISecretKey, ISecretAxe, ISecretBoard
+    public class User : Being, ISecretKey, ISecretAxe, ISecretBoard
     {
-        int Age { get; set; }
-        string Name { get; set; }
+        private int Age;
+        public int _userAge
+        {
+            get { return Age; }
+            set { Age = value; }
+        }
+        private string Name;
+        public string _Name 
+        {
+            get {return Name;}
+            set { Name = value; }
+        }   
         public int Strength { get; set; }
         public int Speed { get; set; }
         public int Size { get; set; }
@@ -16,7 +26,11 @@ namespace Neoplasm.Untitled
         public bool axe = false;
         public bool skateBoard = false;
         public int deaths { get; set; }
-        
+
+        public override void printDetails(string name, int age, string body)
+        {
+            Console.WriteLine("The beings name is {0}, its body takes the shape of a {1}, and it is {2} years old. Tremble.", name, body, age);
+        }
         public bool foundBoard()
         {
             return skateBoard = true;
@@ -33,8 +47,8 @@ namespace Neoplasm.Untitled
 
         public User ()
         {
-            Age = 15;
-            Name = "Bob";
+            _userAge = 15;
+            _Name = "Bob";
             Strength = 5;
             Speed = 5;
             Size = 5;
@@ -42,8 +56,9 @@ namespace Neoplasm.Untitled
 
         public User(int age, string name, string build)
         {
-            Age = age;
-            Name = name;
+            _userAge = age;
+            _Name = name;
+            deaths = 0;
 
             if (build == "BRAWNY")
             {

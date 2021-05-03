@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Being.cs" />
+    <Compile Include="finalRoom.cs" />
     <Compile Include="userMonster.cs" />
     <Compile Include="ISecretBoard.cs" />
     <Compile Include="ISecretAxe.cs" />

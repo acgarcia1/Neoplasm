@@ -11,10 +11,13 @@ namespace Neoplasm.Untitled
 		public static int userAge;
 		public static string userType;
 		public static string userSpecial;
-		public static void printDeath()
+		public static void printDeath(ref User character)
 		{
 			Console.WriteLine("You have failed to discovery the mystery and escape. Dark tendrils from the black earth reach around you,\n" +
-							  "dragging you down to join the eternal Neoplasm growing from our failures.");
+							  "dragging you down to join the eternal Neoplasm growing from our failures.\n");
+			character.axe = false;
+			character.key = false;
+			character.skateBoard = false;
 		
 		}
 
@@ -34,8 +37,14 @@ namespace Neoplasm.Untitled
 		{
 			Console.WriteLine("Thank you for playing Neoplasm! If you feel brave enough to try again: restart the game, create a new character and descened. " +
 							  "It will always be waiting for you...\n" +
-							  "(P.S. You died {0} times.)", deaths);
+							  "(P.S. You died {0} time(s).)", deaths);
 			Console.ReadLine();
 		}
+		
+		public static void winnerWinner(ref User Character)
+        {
+			Console.WriteLine("Congragulations on escaping! You should be proud of yourself. If you want to try a differtn path\n" +
+							  "just reload the game and try again! - Alex Garcia, 2021");
+        }
 	}
 }
