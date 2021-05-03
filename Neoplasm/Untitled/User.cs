@@ -15,6 +15,7 @@ namespace Neoplasm.Untitled
         public bool key = false;
         public bool axe = false;
         public bool skateBoard = false;
+        public int deaths { get; set; }
         
         public bool foundBoard()
         {

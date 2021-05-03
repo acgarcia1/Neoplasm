@@ -13,9 +13,9 @@ namespace Neoplasm.Untitled
 		public static string userSpecial;
 		public static void printDeath()
 		{
-			Console.WriteLine("You have failed to discovery the mystery and escape. Dark tendrils from the black earth reach around you," +
+			Console.WriteLine("You have failed to discovery the mystery and escape. Dark tendrils from the black earth reach around you,\n" +
 							  "dragging you down to join the eternal Neoplasm growing from our failures.");
-
+		
 		}
 
 		public static void printTitle()
@@ -30,10 +30,11 @@ namespace Neoplasm.Untitled
 			//Console.WriteLine("------------\n| NEOPLASM |\n------------");
 		}
 
-		public static void printGoodbye()
+		public static void printGoodbye(int deaths)
 		{
-			Console.WriteLine("Thank you for playing Neoplasm! If you feel brave enough to try again: restart the game, create a new character, and descened. " +
-							  "It will always be waiting for you...");
+			Console.WriteLine("Thank you for playing Neoplasm! If you feel brave enough to try again: restart the game, create a new character and descened. " +
+							  "It will always be waiting for you...\n" +
+							  "(P.S. You died {0} times.)", deaths);
 			Console.ReadLine();
 		}
 	}

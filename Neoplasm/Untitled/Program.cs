@@ -26,7 +26,7 @@ namespace Neoplasm.Untitled
             string userMon = Console.ReadLine();
             userMon = userMon.ToUpper();
             var userMonster = new userMonster(userMon);
-            Console.WriteLine("Your choices will affect the outcome of the game, the options you have, and your chances of success. Good luck to you, brave soul, for you now enter:");
+            Console.WriteLine("Your choices will affect the outcome of the game, the options you have, and your chances of success.\nGood luck to you, brave soul, for you now enter:");
             var userCharacter = new User(userAge, userName, userType);        
           
             Console.ReadLine();
@@ -34,12 +34,13 @@ namespace Neoplasm.Untitled
             {
                 Console.Clear();
                 EventPrint.printTitle();
-                Rooms.Room1(userCharacter.Speed, userCharacter.Size, userCharacter.Strength);
+                Rooms.Room1(userCharacter.Speed, userCharacter.Size, userCharacter.Strength, userCharacter);
                 Console.WriteLine("Would you like to try again? (Y/N)");
                 play = Console.ReadLine();
                 play = play.ToUpper();
+                userCharacter.deaths += 1;
             }
-
+            EventPrint.printGoodbye(userCharacter.deaths);
         }
     }
 }
