@@ -43,8 +43,10 @@ namespace Neoplasm.Untitled
 		
 		public static void winnerWinner(ref User Character)
         {
-			Console.WriteLine("Congragulations on escaping! You should be proud of yourself. If you want to try a differtn path\n" +
+			Console.WriteLine("\nCongragulations on escaping! You should be proud of yourself. If you want to try a differtn path\n" +
 							  "just reload the game and try again! - Alex Garcia, 2021");
+			Console.ReadLine();
+			Environment.Exit(0);
         }
 	}
 }

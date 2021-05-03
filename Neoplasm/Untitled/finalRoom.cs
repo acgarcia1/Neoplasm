@@ -16,7 +16,7 @@ namespace Neoplasm.Untitled
                               "are not alone. The rooms holds a pit with a bridge over it, waterfalls on\n" +
                               "either side. The beast trudges out of darkeness and reveals itself.\n");
 
-            if (monster.body == "spider")
+            if (monster._body == "spider")
             {
                 Console.WriteLine("The great beast {0} stands above you, her legs long and fangs dripping venom.\n" +
                                   "You stand paralyzed by fear for a brief moment before you take action.\n" +
@@ -25,7 +25,7 @@ namespace Neoplasm.Untitled
                                   "What do you choose?\n" +
                                   "- Chest\n" +
                                   "- Trampoline\n" +
-                                  "- Water wall (Top, Mid, Bottom)\n", monster.name);
+                                  "- Water wall (Top, Mid, Bottom)\n", monster._name);
                 choice = Console.ReadLine();
                 choice = choice.ToUpper();
                 if (choice == "TOP")
@@ -36,7 +36,8 @@ namespace Neoplasm.Untitled
                                           "With a big smile plastered on your face you pull out the bazooka, take aim,\n" +
                                           "and blow {0} away, making the room awash with innards. The doors at the back\n" +
                                           "room slowly open, revealing a gradual slope upward towards daylight. Exhausted\n" +
-                                          "and releived, you begin your long walk to the land of the living.", monster.name);
+                                          "and releived, you begin your long walk to the land of the living.", monster._name);
+                        EventPrint.winnerWinner(ref character);
                     }
                     else
                     {
@@ -53,7 +54,7 @@ namespace Neoplasm.Untitled
                                           "and slice clean through it with your axe. {0} stays whole for a moment before\n" +
                                           "sliding apart, its innards coating the bridge. You look back, like the blade of\n" +
                                           "the axe, then move towards the open doors revealing sunlight. You walk back to\n" +
-                                          "the land of the living.", monster.name);
+                                          "the land of the living.", monster._name);
                     }
                 }
                 else
@@ -65,6 +66,7 @@ namespace Neoplasm.Untitled
                                           "you launch of the wall, take the board in your hands, and cave the beasts skull in. You look\n" +
                                           "in disgust on the lifeless body, then work your way towards the sunlight indicating freedom\n" +
                                           "at the back of the room");
+                        EventPrint.winnerWinner(ref character);
                     }
                     else
                     {
@@ -76,7 +78,7 @@ namespace Neoplasm.Untitled
                 }
             }
 
-            else if (monster.body == "large cow")
+            else if (monster._body == "large cow")
             {
                 Console.WriteLine("The great beast {0} stands above you, her large udder dangling in front of you.\n" +
                                 "You stand paralyzed by fear for a brief moment before you take action.\n" +
@@ -85,7 +87,7 @@ namespace Neoplasm.Untitled
                                 "What do you choose?\n" +
                                 "- Chest\n" +
                                 "- Trampoline\n" +
-                                "- Water wall (Top, Mid, Bottom)\n", monster.name);
+                                "- Water wall (Top, Mid, Bottom)\n", monster._name);
                 choice = Console.ReadLine();
                 choice = choice.ToUpper();
                 if (choice == "TOP")
@@ -96,13 +98,14 @@ namespace Neoplasm.Untitled
                                           "With a big smile plastered on your face you pull out the bazooka, take aim,\n" +
                                           "and blow {0} away, making the room awash with innards. The doors at the back\n" +
                                           "room slowly open, revealing a gradual slope upward towards daylight. Exhausted\n" +
-                                          "and releived, you begin your long walk to the land of the living.", monster.name);
+                                          "and releived, you begin your long walk to the land of the living.", monster._name);
+                        EventPrint.winnerWinner(ref character);
                     }
                     else
                     {
                         Console.WriteLine("You reach the chest and pull up on the lid but it won't budge. {0} bounds over\n" +
                                           "to you, and drowns you in milk from her udders while letting out a triumphant\n" +
-                                          "\"MOOOOOOOOOOO!\"");
+                                          "\"MOOOOOOOOOOO!\"", monster._name);
                         EventPrint.printDeath(ref character);
                     }
                 }
@@ -114,7 +117,8 @@ namespace Neoplasm.Untitled
                                           "and slice clean through it with your axe. {0} stays whole for a moment before\n" +
                                           "sliding apart, its innards coating the bridge. You look back, say \"Got Milk?\",  and lick the blade of\n" +
                                           "the axe while moving towards the open doors revealing sunlight. You walk back to\n" +
-                                          "the land of the living.", monster.name);
+                                          "the land of the living.", monster._name);
+                        EventPrint.winnerWinner(ref character);
                     }
                 }
                 else
@@ -126,6 +130,7 @@ namespace Neoplasm.Untitled
                                           "you launch of the wall, take the board in your hands, and cave the beasts skull in. You look\n" +
                                           "in disgust on the lifeless body, then work your way towards the sunlight indicating freedom\n" +
                                           "at the back of the room");
+                        EventPrint.winnerWinner(ref character);
                     }
                     else
                     {
@@ -153,6 +158,7 @@ namespace Neoplasm.Untitled
                                       "dream, but are stopped by a terrible pain on your chest. You rip off your shirt to reveal\n" +
                                       "large circular wounds that look like they were caused by suckers. You stare at your chest\n" +
                                       "for a moment. Your gaze slowly moves to the window, and you watch the curtain dance in the breeze.");
+                    EventPrint.winnerWinner(ref character);
                 }
                 else
                 {

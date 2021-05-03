@@ -280,8 +280,8 @@ namespace Neoplasm.Untitled
             {
 				Console.WriteLine("Not understanding the reason for the pun, you take off running towards the door. You leap into the\n" +
 								  "air and come down with a terrific karate chop on the door. There is a moment of stillness before your\n" +
-								  "hand erupts in a foundtain of blood. Horrified, you stare at your hand as you back into one of the trees.\n" +
-								  "The bark suddenly opens to take you in, your purpose transformed into food for this ancient forest like\n" +
+								  "hand erupts in a fountain of blood. Horrified, you stare at your hand as you back into one of the trees.\n" +
+								  "The bark suddenly opens to take you in, your body transformed into food for this ancient forest just like\n" +
 								  "so many before you.\n");
 				EventPrint.printDeath(ref character);
 				

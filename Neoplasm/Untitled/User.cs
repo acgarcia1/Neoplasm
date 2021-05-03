@@ -29,7 +29,7 @@ namespace Neoplasm.Untitled
 
         public override void printDetails(string name, int age, string body)
         {
-            Console.WriteLine("The beings name is {0}, its body takes the shape of a {1}, and it is {2} years old. Tremble.", name, body, age);
+            Console.WriteLine("The characters name is {0}, its body is {1}, and they are {2} years old. Tremble.", name, body, age);
         }
         public bool foundBoard()
         {
@@ -102,7 +102,7 @@ namespace Neoplasm.Untitled
                     Size = 6;
                 }
             }
-            else //Slight class build
+            else //Slight class build, also handles random input
             {
                 if (age < 20)
                 {
